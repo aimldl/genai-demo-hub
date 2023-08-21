@@ -4,11 +4,14 @@
 #   Created: 2023-08-12 (Sat)
 #   Updated: 2023-08-21 (Mon)
 
-
+# CHANGE THIS FOR YOU
 export GITHUB_USERNAME="aimldl"
 export BOOK_TITLE="genai-demo-hub"
+# CHANGE THIS FOR YOU
 
+# DO NOT CHANGE BELOW (UNLESS YOU KNOW WHAT YOU’RE DOING)
 export OPEN_REMOTE_REPO="firefox https://github.com/${GITHUB_USERNAME}/${BOOK_TITLE}"
+export OPEN_BOOK="firefox https://${GITHUB_USERNAME}.github.io/${BOOK_TITLE}"
 export PUBLISH_BOOK="ghp-import -n -p -f _build/html"
 
 function run() {
@@ -26,13 +29,18 @@ function run() {
 run "cd ~/github/${BOOK_TITLE}"
 run "git add ./*"
 run "git commit -m "adding modified version of my_template!""
+
+echo ""
 run "cat ~/github/token"
-echo "Copy the token"
+echo "Copy the above token to use for the password.\n"
 
 
-echo "After $git push, run the following commands:"
+echo "After \$git push, run the following commands:"
 echo "  $ ${OPEN_REMOTE_REPO}"
+echo "  $ cd ~/github/${BOOK_TITLE}" 
 echo "  $ ${PUBLISH_BOOK}"
+echo "  $ ${OPEN_BOOK}"
+echo ""
 
 # Enter GitHub account name and paste the token
-run "git push"
+#run "git push"
