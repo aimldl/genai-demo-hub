@@ -1,0 +1,38 @@
+#!/bin/bash
+# push_book
+#
+#   Created: 2023-08-12 (Sat)
+#   Updated: 2023-08-21 (Mon)
+
+
+export GITHUB_USERNAME="aimldl"
+export BOOK_TITLE="genai-demo-hub"
+
+export OPEN_REMOTE_REPO="firefox https://github.com/${GITHUB_USERNAME}/${BOOK_TITLE}"
+export PUBLISH_BOOK="ghp-import -n -p -f _build/html"
+
+function run() {
+  # To display the command before running it.
+  # Usage:
+  #   run "COMMAND"
+  # Example:
+  #   If cd ${KF_DIR} is the command to run,
+  #     run "cd ${KF_DIR}"
+  CMD=$1
+  echo $CMD
+  eval $CMD
+}
+
+run "cd ~/github/${BOOK_TITLE}"
+run "git add ./*"
+run "git commit -m "adding modified version of my_template!""
+run "cat ~/github/token"
+echo "Copy the token"
+
+
+echo "After \$git push", run the following commands:"
+echo "  \$ ${OPEN_REMOTE_REPO}"
+echo "  \$ ${PUBLISH_BOOK}"
+
+# Enter GitHub account name and paste the token
+run "git push"

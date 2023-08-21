@@ -1,6 +1,6 @@
-# Practical Large Language Modeling with Google Cloud
+# GenAI Demo Hub
 
-This mini-book introduced how to use Google Cloud for Large Language Models (LLMs). 
+This hub is a test.
 
 ## Table of Contents
 
