@@ -12,10 +12,7 @@ export BOOK_TITLE="genai-demo-hub"
 # DO NOT CHANGE BELOW (UNLESS YOU KNOW WHAT YOU’RE DOING)
 export LOCAL_BOOK="~/jupyter-book/${BOOK_TITLE}"
 export LOCAL_REPO="~/github/${BOOK_TITLE}"
-
-export OPEN_REMOTE_REPO="firefox https://github.com/${GITHUB_USERNAME}/${BOOK_TITLE}"
-export OPEN_BOOK="firefox https://${GITHUB_USERNAME}.github.io/${BOOK_TITLE}"
-export PUBLISH_BOOK="ghp-import -n -p -f _build/html"
+export REMOTE_REPO="https://github.com/${GITHUB_USERNAME}/${BOOK_TITLE}"
 
 function run() {
   # To display the command before running it.
@@ -37,15 +34,13 @@ run "git add ./*"
 run "git commit -m "adding modified version of my_template!""
 
 echo ""
-run "cat ~/github/token"
-echo "Copy the above token to use for the password."
+echo "Copy the following password token:"
+cat ~/github/token
 echo ""
 
 echo "After \$git push, run the following commands:"
-echo "  $ ${OPEN_REMOTE_REPO}"
+echo "  $ firefox ${REMOTE_REPO}"
 echo "  $ cd ${LOCAL_REPO}" 
-echo "  $ ${PUBLISH_BOOK}"
-echo "  $ ${OPEN_BOOK}"
 echo ""
 
 # Enter GitHub account name and paste the token
