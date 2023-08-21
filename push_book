@@ -10,6 +10,9 @@ export BOOK_TITLE="genai-demo-hub"
 # CHANGE THIS FOR YOU
 
 # DO NOT CHANGE BELOW (UNLESS YOU KNOW WHAT YOU’RE DOING)
+export LOCAL_BOOK="~/jupyter-book/${BOOK_TITLE}"
+export LOCAL_REPO="~/github/${BOOK_TITLE}"
+
 export OPEN_REMOTE_REPO="firefox https://github.com/${GITHUB_USERNAME}/${BOOK_TITLE}"
 export OPEN_BOOK="firefox https://${GITHUB_USERNAME}.github.io/${BOOK_TITLE}"
 export PUBLISH_BOOK="ghp-import -n -p -f _build/html"
@@ -26,7 +29,10 @@ function run() {
   eval $CMD
 }
 
-run "cd ~/github/${BOOK_TITLE}"
+
+# Note there is /*.
+run "cp -r ${LOCAL_BOOK}/* ${LOCAL_REPO}"
+run "cd ${LOCAL_REPO}"
 run "git add ./*"
 run "git commit -m "adding modified version of my_template!""
 
@@ -37,7 +43,7 @@ echo ""
 
 echo "After \$git push, run the following commands:"
 echo "  $ ${OPEN_REMOTE_REPO}"
-echo "  $ cd ~/github/${BOOK_TITLE}" 
+echo "  $ cd ${LOCAL_REPO}" 
 echo "  $ ${PUBLISH_BOOK}"
 echo "  $ ${OPEN_BOOK}"
 echo ""

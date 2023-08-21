@@ -10,6 +10,9 @@ export BOOK_TITLE="genai-demo-hub"
 # CHANGE THIS FOR YOU
 
 # DO NOT CHANGE BELOW (UNLESS YOU KNOW WHAT YOU’RE DOING)
+export LOCAL_BOOK="~/jupyter-book/${BOOK_TITLE}"
+export LOCAL_REPO="~/github/${BOOK_TITLE}"
+
 export OPEN_BOOK="firefox https://${GITHUB_USERNAME}.github.io/${BOOK_TITLE}"
 
 function run() {
@@ -30,10 +33,9 @@ run "cat ~/github/token"
 echo "Copy the above token to use for the password."
 echo ""
 
-run "cd ~/github/${BOOK_TITLE}"
+run "cd ${LOCAL_REPO}"
 echo "After the ghp-import command, run the following commands:"
 echo "  $ ${OPEN_BOOK}"
 echo ""
 
 run "ghp-import -n -p -f _build/html"
-

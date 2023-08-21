@@ -1,6 +1,6 @@
 # GenAI Demo Hub
 
-This hub is a test.
+Find the best demos and narratives to support customer conversation around GenAI and LLMs.
 
 ## Table of Contents
 
