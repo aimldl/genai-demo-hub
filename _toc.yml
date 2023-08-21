@@ -4,4 +4,7 @@
 format: jb-book
 root: intro
 chapters:
-- file: content/markdown
+- file: content/innovation/README
+- file: content/discovery/README
+- file: content/decision/README
+- file: content/delivery/README
