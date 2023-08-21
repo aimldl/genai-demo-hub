@@ -1,3 +1,0 @@
-# Delivery
-
-Manage delivery by ...
