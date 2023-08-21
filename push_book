@@ -30,9 +30,9 @@ run "cat ~/github/token"
 echo "Copy the token"
 
 
-echo "After \$git push", run the following commands:"
-echo "  \$ ${OPEN_REMOTE_REPO}"
-echo "  \$ ${PUBLISH_BOOK}"
+echo "After $git push, run the following commands:"
+echo "  $ ${OPEN_REMOTE_REPO}"
+echo "  $ ${PUBLISH_BOOK}"
 
 # Enter GitHub account name and paste the token
 run "git push"
