@@ -38,7 +38,7 @@ echo "Copy the following password token:"
 cat ~/github/token
 echo ""
 
-echo "After \$git push, run the following commands:"
+echo "After the git push command, run the following commands:"
 echo "  $ firefox ${REMOTE_REPO}"
 echo "  $ cd ${LOCAL_REPO}" 
 echo ""
