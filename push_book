@@ -28,8 +28,8 @@ function run() {
 
 
 # Note there is /*.
-run "cp -r ${LOCAL_BOOK}/* ${LOCAL_REPO}"
-run "cd ${LOCAL_REPO}"
+#run "cp -r ${LOCAL_BOOK}/* ${LOCAL_REPO}"
+#run "cd ${LOCAL_REPO}"
 run "git add ./*"
 run "git commit -m "adding modified version of my_template!""
 
