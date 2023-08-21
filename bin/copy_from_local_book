@@ -1,0 +1,38 @@
+#!/bin/bash
+# copy_from_local_book
+#
+#   Created: 2023-08-12 (Sat)
+#   Updated: 2023-08-21 (Mon)
+
+# CHANGE THIS FOR YOU
+export GITHUB_USERNAME="aimldl"
+export BOOK_TITLE="genai-demo-hub"
+# CHANGE THIS FOR YOU
+
+# DO NOT CHANGE BELOW (UNLESS YOU KNOW WHAT YOU’RE DOING)
+export LOCAL_BOOK="~/jupyter-book/${BOOK_TITLE}"
+export LOCAL_REPO="~/github/${BOOK_TITLE}"
+export REMOTE_REPO="https://github.com/${GITHUB_USERNAME}/${BOOK_TITLE}"
+
+function run() {
+  # To display the command before running it.
+  # Usage:
+  #   run "COMMAND"
+  # Example:
+  #   If cd ${KF_DIR} is the command to run,
+  #     run "cd ${KF_DIR}"
+  CMD=$1
+  echo $CMD
+  eval $CMD
+}
+
+
+# Note there is /*.
+run "cp -r ${LOCAL_BOOK}/* ${LOCAL_REPO}"
+
+echo ""
+echo "To verify..."
+run "ls ${LOCAL_BOOK}"
+
+echo ""
+run "ls ${LOCAL_REPO}"

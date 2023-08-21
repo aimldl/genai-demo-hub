@@ -1,0 +1,26 @@
+#!/bin/bash
+# build
+#
+#   Created: 2023-08-12 (Sat)
+#   Updated: 2023-08-21 (Mon)
+
+# CHANGE THIS FOR YOU
+export BOOK_TITLE="genai-demo-hub"
+# CHANGE THIS FOR YOU
+
+# DO NOT CHANGE BELOW (UNLESS YOU KNOW WHAT YOU’RE DOING)
+function run() {
+  # To display the command before running it.
+  # Usage:
+  #   run "COMMAND"
+  # Example:
+  #   If cd ${KF_DIR} is the command to run,
+  #     run "cd ${KF_DIR}"
+  CMD=$1
+  echo $CMD
+  eval $CMD
+}
+
+# Clean all
+run "cd ~/jupyter-book"
+run "jb build ${BOOK_TITLE}"
