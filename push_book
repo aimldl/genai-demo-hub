@@ -32,8 +32,8 @@ run "git commit -m "adding modified version of my_template!""
 
 echo ""
 run "cat ~/github/token"
-echo "Copy the above token to use for the password.\n"
-
+echo "Copy the above token to use for the password."
+echo ""
 
 echo "After \$git push, run the following commands:"
 echo "  $ ${OPEN_REMOTE_REPO}"
