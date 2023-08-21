@@ -1,4 +1,0 @@
-# Discovery
-
-Discover readiness and ...
-

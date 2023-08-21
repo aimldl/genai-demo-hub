@@ -1,4 +1,0 @@
-# Innovation
-
-Think about ...
-
